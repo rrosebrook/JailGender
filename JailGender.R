@@ -1,4 +1,5 @@
 library(dplyr)
+library(acs)
 
 #Import the male/female date and break up by character width
 mm <- "C:\\Users\\rrosebro\\Desktop\\da09517-0001.txt"
@@ -32,7 +33,7 @@ menus <- filter(men, StateCode == 52)
 womus <- filter(women, StateCode == 52)
 
 #filter out data just for Federal prisons
-menfed <- filter(men, StateCode = 53)
+menfed <- filter(men, StateCode == 53)
 womfed <- filter(women, StateCode == 53)
 
 #filter out datate just for State Prisons
